@@ -1,0 +1,56 @@
+/* Computer Dipartament */
+.com-text span{
+    position: relative;
+    font-weight: bolder;
+}
+.com-text span::before{
+    content: "Instagram";
+    color: rgb(44, 11, 255);
+    animation: words 20s infinite;
+}
+.com-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid black;
+    right: -8px;
+    animation: corsor .7s infinite, typing 20s steps(15) infinite;
+}
+@keyframes corsor {
+    to{
+        border-left: 2px solid #0dcaf0;
+    }
+}
+@keyframes words{
+    0%,20%{
+        content: "1st Semister (K-Scheme)";
+        color: blue;
+    }
+    21%,40%{
+        content: "2nd Semister (K-Scheme)";
+        color: rgb(255, 15, 15);
+    }
+    41%,60%{
+        content: "3rd Semister";
+        color: rgb(109, 109, 117);
+    }
+    61%,80%{
+        content: "4th Semister";
+        color: rgb(146, 97, 12);
+    }
+    81%,100%{
+        content: "5th Semister";
+        color: rgb(104, 121, 236);
+    }
+    
+}
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+         width: 0%;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}

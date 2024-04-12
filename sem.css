@@ -1,0 +1,56 @@
+/* semister */ 
+.com6th-text  span{
+    position: relative;
+    font-weight: bolder;
+}
+.com6th-text span::before{
+    content: "pyq's";
+    color: rgb(44, 11, 255);
+    animation: words 20s infinite;
+}
+.com6th-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid black;
+    right: -8px;
+    animation: corsor .7s infinite, typing 20s steps(15) infinite;
+}
+@keyframes corsor {
+    to{
+        border-left: 2px solid #0dcaf0;
+    }
+}
+@keyframes words{
+    0%,20%{
+        content: "PYQ'S";
+        color: blue;
+    }
+    21%,40%{
+        content: "Solved Manual's";
+        color: rgb(255, 15, 15);
+    }
+    41%,60%{
+        content: "Handwritter Note's";
+        color: rgb(109, 109, 117);
+    }
+    61%,80%{
+        content: "Sllybus Copy's";
+        color: rgb(146, 97, 12);
+    }
+    81%,100%{
+        content: "Unit-vais Pdf's";
+        color: rgb(104, 121, 236);
+    }
+    
+}
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+         width: 0%;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
